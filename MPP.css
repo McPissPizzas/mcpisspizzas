@@ -1,0 +1,96 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(248, 201, 98, 0.779);
+}
+
+#Kopfleiste {
+    display: flex;
+    flex-direction: row;
+    background-image: url("text_box.png");
+    background-color: rgba(0, 0, 0, 0.61);
+    background-size: cover;
+    text-align: center;
+    color: rgb(144, 166, 246);
+    width: 100vw;
+    height: 80px;
+    transition: height 0.5s ease;
+    overflow: hidden;
+
+
+
+
+}
+
+#Kopfleiste:hover {
+    height: 150px;
+    padding: auto;
+}
+
+#Discord {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid beige;
+    width: auto;
+    color: rgb(144, 166, 246);
+    height: 20px;
+    font-family: "Headfont";
+    margin: 30px;
+    transition: color 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+    cursor: pointer;
+    padding: 4px;
+    text-decoration:underline;
+    
+}
+
+#Discord:hover {
+    background-color: rgb(144, 166, 246);
+    color: black;
+    border: 2px solid black;
+    border-bottom: 1;
+
+}
+
+.cheese {
+    width: 100vw;
+    height: 90px;
+    background-image: url("kase.png");
+    background-repeat: repeat-x;
+    background-size: 120px auto;
+    border-top: 4px solid #d79a4a;
+    border-top-style: solid;
+
+}
+
+@font-face {
+    font-family: "Headfont";
+    src: url(/Fonts/Audiowide-Regular.ttf);
+}
+
+.Headbtn {
+    position: relative;
+    display: inline-block;
+}
+
+.Headbtn:hover .hidden-img {
+    opacity: 1;
+    z-index: 1;
+    top: 100%;
+}
+
+.hidden-img {
+    position: absolute;
+    top: 00%;          /* vertikal zentriert unter Button */
+    left: 0%;
+    width: 100%;      /* Größe anpassen */
+    z-index: -1;        /* hinter dem Button */
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0px 100px 0px black inset;
+   
+}
+
+.button-container span {
+    position: relative;
+    z-index: 2;        /* Button/Text liegt vor dem Bild */
+}
