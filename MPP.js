@@ -31,22 +31,20 @@ function Animpress(){
 const btn = document.getElementById("babawagen")
 const audio = document.getElementById("sound")
 
-const audioContext = new AudioContext()
-const source = audioContext.createMediaElementSource(audio)
-const gainNode = audioContext.createGain()
-
-source.connect(gainNode)
-gainNode.connect(audioContext.destination)
-
-// Startlautstärke normal
-gainNode.gain.value = 1
+let audioContext, gainNode, source
 
 btn.addEventListener("click", () => {
+    if (!audioContext) {
+        audioContext = new AudioContext()
+        gainNode = audioContext.createGain()
+        source = audioContext.createMediaElementSource(audio)
+        source.connect(gainNode)
+        gainNode.connect(audioContext.destination)
+    }
+
     audio.currentTime = 0
     audio.play()
-
-    // Nach 1 Sekunde die Lautstärke hochziehen (smooth)
-    gainNode.gain.setValueAtTime(1, audioContext.currentTime)                  // Startwert
+    gainNode.gain.setValueAtTime(1, audioContext.currentTime)
     gainNode.gain.linearRampToValueAtTime(10, audioContext.currentTime + 1)
 })
 
@@ -65,4 +63,5 @@ btn.addEventListener("click", () => {
 //     })
 
 // })
+
 
