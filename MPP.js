@@ -47,7 +47,7 @@ btn.addEventListener("click", () => {
 
     // Nach 1 Sekunde die Lautstärke hochziehen (smooth)
     gainNode.gain.setValueAtTime(1, audioContext.currentTime)                  // Startwert
-    gainNode.gain.setValueAtTime(200,3)  // nach 1 Sekunde 10x laut
+    gainNode.gain.linearRampToValueAtTime(10, audioContext.currentTime + 1)
 })
 
 
@@ -65,3 +65,4 @@ btn.addEventListener("click", () => {
 //     })
 
 // })
+
