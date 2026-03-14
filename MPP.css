@@ -5,9 +5,9 @@ body {
     margin: 0px;
     background: linear-gradient(30deg, rgb(255, 251, 0) 0%, rgba(255, 136, 0, 0.872) 40%, rgba(238, 19, 227, 0.694) 70%, purple 100%);
     overflow: hidden;
-  
-    
-   
+
+
+
 }
 
 #Kopfleiste {
@@ -66,7 +66,7 @@ body {
 
 #Discord {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     border: 2px solid beige;
     width: auto;
     color: rgb(144, 166, 246);
@@ -161,19 +161,17 @@ h1 {
     border-radius: 190px;
     background-color: #d79a4a;
     transition: all 0.3s ease;
-    border: #905303 2px solid ;
+    border: #905303 2px solid;
 }
 
 #babawagen:hover {
     transform: scale(1.2);
     background-color: #FFD700;
-    border: #B8860B 2px solid;    
+    border: #B8860B 2px solid;
 }
 
 .Textbox {
     display: inline-block;
-    margin: 10px;
-    height: auto;
     padding: 20px;
     font-family: "Subhead";
     border: #ffff01 3px solid;
@@ -184,37 +182,47 @@ h1 {
     background-blend-mode: multiply;
     transition: all 0.3s ease;
     transform-origin: center;
+    margin: 20px;
+    
 }
+
 .Textbox:hover {
     background-blend-mode: normal;
     border-color: #ff7700;
     text-shadow: 0px 1px 10px rgb(0, 0, 0);
-    transform: scale(1.05) ;
+    transform: scale(1.05);
     width: auto;
-   
+
 }
+
 h2 {
     padding-top: 0px;
     font-family: "Subhead";
     color: #ff7700f3;
     font-size: 30px;
-    text-shadow: 0px 1px 10px   rgb(0, 0, 0);
+    text-shadow: 0px 1px 10px rgb(0, 0, 0);
 }
 
 li {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #e1ff00f3;
     font-size: 20px;
     text-shadow: 0.1px 2px 1px rgb(0, 0, 0);
 }
+
 .main {
     display: inline-flex;
     flex-direction: row;
-    padding: 10px;
+    
+    width: 100%;
+    justify-content: center;
+    
+    margin-top: 10vh;
 }
+
 .ents {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #e1ff00f3;
-    font-size: 20px;
+    font-size: 28px;
     text-shadow: 0.1px 2px 1px rgb(0, 0, 0);
 }
